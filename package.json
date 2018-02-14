@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "latest",
+    "ejs": "latest",
+    "mongodb": "^2.2.33",
+    "express-session": "latest",
+    "dotenv": "latest",
+  }
+}

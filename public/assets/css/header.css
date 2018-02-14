@@ -1,0 +1,6 @@
+h1 {color:white;margin-top: 0px;font-family:akronim;
+  text-shadow: 2px 2px 8px #000000;font-size:120px;}
+h1 > .color1 {color:lightgreen;}
+h1 > .color2 {color:green;}
+header {background-color:teal;}
+nav {margin-top: -8px;}

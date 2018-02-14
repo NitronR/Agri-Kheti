@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+  <a class="navbar-brand navbar-link" href="C:\Users\Dell\Contacts\Desktop\abc\assets\img\logo.jpg">
+    <img src="assets/img/logo.jpg" style="width:50px;height:auto;margin-top:-15px;" />
+  </a>
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+                <li role="presentation"><a href="/">Home </a></li>
+                <li role="presentation"><a href="/products">Products </a></li>
+                <li role="presentation"><a href="/tutorials">Tutorials </a></li>
+                    <li role="presentation"><a href="/contact_us">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <% if(user){ %>
+                <li role="presentation"><a class="text-primary" href="/user_posts" target="_top"> <%=user.name%> </a></li>
+                <li role="presentation"><a class="text-primary" href="/user_posts" target="_top"> My posts </a></li>
+                <li role="presentation" id='logout'><a class="text-primary" target="_top"> Logout </a></li>
+              <% }else{ %>
+                <li role="presentation"><a class="text-primary" id="login_register" target="_top"> Login/Register </a></li>
+              <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriKheti</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
+    <link rel="stylesheet" href="assets/css/formdiv.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/izimodal/iziModal.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <style>
+      header span{
+        font-family: 'Cookie' !important
+      }
+      #supply,#demand{
+        padding: 10px;
+      }
+    </style>
+</head>
+
+<body>
+  <header class="header_background header_background_2">
+		<h1 class="text-center"><span class="color1">Agri</span><span class="color2">Kheti</span></h1>
+	</header>
+  <% include nav.ejs %>
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item active" id='supply-tab'>
+        <a class="nav-link" href="#">Supply</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id='demand-tab'>Demand</a>
+      </li>
+    </ul>
+    <div id='supply'>
+
+    </div>
+    <div id='demand' style='display:none'>
+
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id='modal-login-register'>
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="nav-item active" id='login-tab'>
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item" id='register-tab'>
+                <a class="nav-link" href="#">Register</a>
+              </li>
+            </ul>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div id='login-form'>
+                <div class="form-group">
+                    <label for="email-input-field" class="control-label">Mobile Number</label>
+                    <input type="email" class="form-control" id="login_mnumber"/>
+                </div>
+                <div class="form-group">
+                    <label for="pawssword-input-field" class="control-label">Password </label>
+                    <input type="password" class="form-control" id="login_passwd"/>
+                </div>
+              </div>
+
+              <div id='register-form' style='display:none'>
+                <div class="form-group">
+                    <label for="name-input-field" class="control-label">User type : </label>
+                    <input type="radio" name="user-type" value="farmer"> Farmer
+                    <input type="radio" name="user-type" value="wholesaler"> Wholesaler
+                </div>
+                <div class="form-group">
+                    <label for="name-input-field" class="control-label">Name </label>
+                    <input type="text" class="form-control" id="name"/>
+                </div>
+                <div class="form-group">
+                    <label for="email-input-field" class="control-label">Mobile Number</label>
+                    <input type="email" class="form-control" id="register_mnumber"/>
+                </div>
+                <div class="form-group">
+                    <label for="pawssword-input-field" class="control-label">Password </label>
+                    <input type="password" class="form-control" id="register_passwd"/>
+                </div>
+                <div class="form-group">
+                    <label for="repeat-pawssword-input-field" class="control-label">Repeat Password </label>
+                    <input type="password" class="form-control" id="cpasswd"/>
+                </div>
+                <div class="form-group">
+                    <label for="email-input-field" class="control-label">Address</label>
+                    <input type="email" class="form-control" id="address"/>
+                </div>
+                <div class="form-group">
+                    <label for="email-input-field" class="control-label">District</label>
+                    <input type="email" class="form-control" id="district"/>
+                </div>
+                <div class="form-group">
+                    <label for="email-input-field" class="control-label">State</label>
+                    <input type="email" class="form-control" id="state"/>
+                </div>
+              </div>
+              <div class="alert alert-danger" id="invalid_error" style="display:none">Invalid entry(s)</div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default submit-button" id='ok-login-register'>OK</button>
+              <button type="button" class="btn btn-default submit-button" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>
